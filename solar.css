@@ -1,0 +1,261 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+ul{
+    list-style: none;
+}
+ul li button{
+    width:200px;
+    height:50px;
+    background: transparent;
+    border:none;
+    font-size: 25px;
+    color:white;
+    margin:15px;
+    text-align: left;
+    padding:15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+ul li button:hover{
+    transform: scale(1.1);
+}
+label{
+    color: white;
+    font-size: 30px;
+}
+input{
+    display: none;
+}
+.contents{
+    width:85%;
+}
+h1{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 230px;
+}
+h1:hover{
+    transform: translate(30px,0) scale(1.2);
+    animation: animate 0.1s ease-in;
+}
+.sun{
+    height:400px;
+    width:800px;
+    margin: 5px;
+    backdrop-filter:blur(25px);
+    background:rgba(0, 0, 0, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+    border: 3px solid rgba(87, 87, 87, 0.489);
+    border-radius: 30px;
+    margin-left:200px;
+    z-index: 1;
+}
+.mercury{
+    height:400px;
+    width:800px;
+    margin: 5px;
+    backdrop-filter:blur(25px);
+    background:rgba(0, 0, 0, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+    border: 3px solid rgba(87, 87, 87, 0.489);
+    border-radius: 30px;
+    transform: translate(0,-350px);
+    margin-left:200px;
+    z-index: 1;
+}
+.venus{
+    height:400px;
+    width:800px;
+    margin: 5px;
+    backdrop-filter:blur(25px);
+    background:rgba(0, 0, 0, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+    border: 3px solid rgba(87, 87, 87, 0.489);
+    border-radius: 30px;
+    transform: translate(0,-700px);
+    margin-left:200px;
+    z-index: 1;
+}
+.earth{
+    height:400px;
+    width:800px;
+    margin: 5px;
+    backdrop-filter:blur(25px);
+    background:rgba(0, 0, 0, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+    border: 3px solid rgba(87, 87, 87, 0.489);
+    border-radius: 30px;
+    transform: translate(0,-1050px);
+    margin-left:200px;
+    z-index: 1;
+}
+.mars{
+    height:400px;
+    width:800px;
+    margin: 5px;
+    backdrop-filter:blur(25px);
+    background:rgba(0, 0, 0, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+    border: 3px solid rgba(87, 87, 87, 0.489);
+    border-radius: 30px;
+    transform: translate(0,-1400px);
+    margin-left:200px;
+    z-index: 1;
+}
+.jupiter{
+    height:400px;
+    width:800px;
+    margin: 5px;
+    backdrop-filter:blur(25px);
+    background:rgba(0, 0, 0, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+    border: 3px solid rgba(87, 87, 87, 0.489);
+    border-radius: 30px;
+    transform: translate(0,-1750px);
+    margin-left:200px;
+    z-index: 1;
+}
+.saturn{
+    height:400px;
+    width:800px;
+    margin: 5px;
+    backdrop-filter:blur(25px);
+    background:rgba(0, 0, 0, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+    border: 3px solid rgba(87, 87, 87, 0.489);
+    border-radius: 30px;
+    transform: translate(0,-2100px);
+    margin-left:200px;
+    z-index: 1;
+}
+.uranus{
+    height:400px;
+    width:800px;
+    margin: 5px;
+    backdrop-filter:blur(25px);
+    background:rgba(0, 0, 0, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+    border: 3px solid rgba(87, 87, 87, 0.489);
+    border-radius: 30px;
+    transform: translate(0,-2450px);
+    margin-left:200px;
+    z-index: 1;
+}
+.neptune{
+    height:400px;
+    width:800px;
+    margin: 5px;
+    backdrop-filter:blur(25px);
+    background:rgba(0, 0, 0, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+    border: 3px solid rgba(87, 87, 87, 0.489);
+    border-radius: 30px;
+    margin-left:200px;
+    transform: translate(0,-2800px);
+    z-index: 1;
+}
+p{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 25px;
+    color: white;
+    margin-top: 60px;
+}
+#sunbox:checked ~.sun{
+    z-index:2;
+    transform: translate(0,150px) scale(1.5);
+    animation: animate 0.2s ease-in;
+    display: block;
+}
+#sunbox:checked ~.mercury,#sunbox:checked ~.venus,#sunbox:checked ~.earth,#sunbox:checked ~.mars,#sunbox:checked ~.jupiter,#sunbox:checked ~.saturn,#sunbox:checked ~.uranus,#sunbox:checked ~.neptune{
+    display: none;
+}
+#mercury:checked ~.mercury{
+    z-index:2;
+    transform: translate(0,-250px) scale(1.5);
+    animation: animate 0.2s ease-in;
+    display: block;
+}
+#mercury:checked ~.venus,#mercury:checked ~.earth,#mercury:checked ~.mars,#mercury:checked ~.jupiter,#mercury:checked ~.saturn,#mercury:checked ~.uranus,#mercury:checked ~.neptune{
+    display: none;
+}
+#venus:checked ~.venus{
+    z-index:2;
+    transform: translate(0,-650px) scale(1.5);
+    animation: animate 0.2s ease-in;
+    display: block;
+
+}
+#venus:checked ~.earth,#venus:checked ~.mars,#venus:checked ~.jupiter,#venus:checked ~#venus:checked ~.saturn,#venus:checked ~.uranus,#venus:checked ~.neptune{
+    display: none;
+}
+#earth:checked ~.earth{
+    z-index:2;
+    transform: translate(0,-1050px) scale(1.5);
+    animation: animate 0.2s ease-in;
+    display: block;
+}
+#earth:checked ~.sun,#earth:checked ~.mercury,#earth:checked ~.venus,#earth:checked ~.mars,#earth:checked ~.jupiter,#earth:checked ~.saturn,#earth:checked ~.uranus,#earth:checked ~.neptune{
+    display: none;
+}
+#mars:checked ~.mars{
+    z-index:2;
+    transform: translate(0,-1460px) scale(1.5);
+    animation: animate 0.2s ease-in;
+    display: block;
+}
+#mars:checked ~.jupiter,#mars:checked ~.saturn,#mars:checked ~.uranus,#mars:checked ~.neptune{
+    display: none;
+}
+#jupiter:checked ~.jupiter{
+    z-index:2;
+    transform: translate(0,-1860px) scale(1.5);
+    animation: animate 0.2s ease-in;
+    display: block;
+}
+#jupiter:checked ~.saturn,#jupiter:checked~.uranus,#jupiter:checked~.neptune{
+    display: none;
+}
+#saturn:checked ~.saturn{
+    z-index:2;
+    transform: translate(0,-2250px) scale(1.5);
+    animation: animate 0.2s ease-in;
+    display: block;
+}
+#saturn:checked~.uranus,#saturn:checked~.neptune{
+    display: none;
+}
+#uranus:checked ~.uranus{
+    z-index:2;
+    transform: translate(0,-2670px) scale(1.5);
+    animation: animate 0.2s ease-in;
+    display: block;
+}
+#uranus:checked~.neptune{
+    display: none;
+}
+#neptune:checked ~.neptune{
+    z-index:2;
+    transform: translate(0,-3100px) scale(1.5);
+    animation: animate 0.2s ease-in;
+    display: block;
+}
+@keyframes animate {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
